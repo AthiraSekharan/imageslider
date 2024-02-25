@@ -19,11 +19,11 @@ function Abc() {
 
 
 
-     <div className='m-5'>
+     <div className='m-5 full'>
        <Carousel data-bs-theme="dark">
         <Carousel.Item style={{height:'600px'}} >
           <img style={{height:'90vh'}}
-            className="d-block w-100 pic "
+            className="d-block w-100 pic"
             src="https://images.pexels.com/photos/290660/pexels-photo-290660.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="First slide"
           />
