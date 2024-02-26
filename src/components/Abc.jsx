@@ -1,12 +1,29 @@
-import React from 'react'
+
 import { Carousel } from 'react-bootstrap'
 import './Para.css'
+import React, { useRef, useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function Abc() {
+  const sliderRef = useRef(null);
+  
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   
   return (
     <>
 
+
+   
+    
 
 
 
@@ -62,6 +79,30 @@ function Abc() {
         </Carousel.Item>
       </Carousel>
      </div>
+
+
+
+
+     <div className='row mb-4'>
+      <div className="col-lg-4"></div>
+      <div className="col-lg-4"><div>
+      <Slider ref={sliderRef} {...sliderSettings}>
+        <div>
+          <h3>Focus On What You Love</h3>
+          <img style={{height:'400px',width:'100%'}} src="https://images.pexels.com/photos/7520935/pexels-photo-7520935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1" />
+        </div>
+        <div>
+          <img  style={{height:'400px',width:'100%'}} src="https://images.pexels.com/photos/7569014/pexels-photo-7569014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2" />
+        </div>
+        <div>
+          <img style={{height:'400px',width:'100%'}}  src="https://images.pexels.com/photos/4471892/pexels-photo-4471892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3" />
+        </div>
+      </Slider>
+
+    </div></div>
+      <div className="col-lg-4"></div>
+
+    </div>
     </>
   )
 }
